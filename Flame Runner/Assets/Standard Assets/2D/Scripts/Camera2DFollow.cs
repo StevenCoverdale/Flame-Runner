@@ -47,7 +47,7 @@ namespace UnityStandardAssets._2D
 
             transform.position = newPos;
 
-            m_LastTargetPosition = target.position;
+            m_LastTargetPosition = target.position * -5;
         }
     }
 }
