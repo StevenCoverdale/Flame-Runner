@@ -8,9 +8,11 @@ public class SpawnObjects : MonoBehaviour
 	public float spawnMax = 2f;
 	public Transform m_player;
 
+	private float m_xPos;
 	// Use this for initialization
 	void Start () 
 	{
+		m_xPos = m_player.position.x + this.transform.position.x;
 		Spawn();
 	}
 	void Spawn()
@@ -20,6 +22,6 @@ public class SpawnObjects : MonoBehaviour
 	}
 	void Update () 
 	{
-		transform.position = new Vector3(m_player.position.x + this.transform.position.x ,this.transform.position.y,0);
+		transform.position = new Vector3(m_player.transform.position.x + m_xPos ,this.transform.position.y,0);
 	}
 }
